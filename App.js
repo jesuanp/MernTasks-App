@@ -1,20 +1,37 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+
+// context
+import AuthState from './context/auth/authState';
+import ProyectoState from './context/proyectoContext/proyectoState';
+import TasksState from './context/tasksContext/tasksState';
+import DrawerState from './context/drawerContext/drawerState';
+
+//importo los componentes:
+import SwitchAuthScreens from './components/SwitchAuthScreens';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+    <AuthState>
+      <ProyectoState>
+        <TasksState>
+          <DrawerState>
+
+            <NavigationContainer>
+
+              <StatusBar />
+
+              <SwitchAuthScreens />
+              
+            </NavigationContainer>
+          
+          </DrawerState>
+        </TasksState>
+      </ProyectoState>
+    </AuthState>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
