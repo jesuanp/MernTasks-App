@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mern-tasks-app",
+    "name": "Mern Tasks App",
     "slug": "mern-tasks-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,9 +22,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#1a202d"
+      },
+      "package": "com.jp.merntasks"
     },
     "web": {
       "favicon": "./assets/favicon.png"
